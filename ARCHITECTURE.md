@@ -9,6 +9,7 @@
 - **HCP (Housecall Pro)** — field service management, source of truth for jobs and technicians
 - **n8n** (self-hosted DigitalOcean) — scheduled and webhook-triggered automations
 - **Anthropic API (Claude)** — content generation (prep emails, fuzzy matching)
+- **ElevenLabs** — AI voice agent for inbound phone; bridges to HCP via Vercel middleware (in planning)
 - **Stripe** — $100 deposit on booking (pending integration)
 - **Inngest** — reserved for future event-driven workflows; n8n covers current needs
 

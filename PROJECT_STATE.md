@@ -54,8 +54,15 @@ Ordered by priority.
 7. **Daily Cap Enforcement** — wire existing Supabase `daily_cap` table into `hcp-availability` route
 8. **Commercial Cards** — Stripe tokens stored in Supabase `commercial_cards` table keyed by site address
 9. **Multi-site Search** — custom tool for Katie to search sites across commercial accounts
-10. **Conversation AI** — GHL native, configure for Chem-Dry persona
-11. **`chem-dry-redeploy` skill** — meta-step: extract the redeploy pattern into a skill in `obsidian-labs-skills` so forking for a new location is fast
+10. **Conversation AI (GHL native)** — configure chat/SMS AI persona for Chem-Dry using GHL's built-in Conversation AI (handles web chat, SMS, social DMs)
+
+11. **ElevenLabs Voice Agent** — AI phone agent with direct HCP API booking via Vercel middleware layer. Handles inbound calls to the service line, qualifies, books into HCP. Scope includes:
+    - ElevenLabs agent configuration and persona
+    - Vercel middleware (`/api/voice-book` or similar) bridging ElevenLabs → HCP availability + booking endpoints
+    - Call routing logic (when to transfer to human vs. fully automate)
+    - Test protocol before going live on the real service phone number
+
+12. **`chem-dry-redeploy` skill** — meta-step: extract the redeploy pattern into a skill in `obsidian-labs-skills` so forking for a new location is fast
 
 ## Blockers
 
